@@ -1,0 +1,123 @@
+body {
+  background-color: #f0f4f8;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #b19cd9;
+  text-align: center;
+  padding: 20px;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #b19cd9;
+  padding-bottom: 10px;
+}
+
+section {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  max-width: 800px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 2px solid #b19cd9;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #333;
+  background-color: #f0f4f8;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #ff9800;
+}
+
+button {
+  background-color: #b19cd9;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #ff9800;
+  transform: translateY(-3px);
+}
+
+#incompleteBookList,
+#completeBookList {
+  display: grid;
+  gap: 20px;
+}
+
+[data-testid="bookItem"] {
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+[data-testid="bookItem"]:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+[data-testid="bookItem"] button {
+  margin-right: 10px;
+  background-color: #b81bd8;
+}
+
+[data-testid="bookItem"] button:hover {
+  background-color: #b81bd8;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+}
